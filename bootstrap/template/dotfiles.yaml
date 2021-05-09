@@ -1,0 +1,21 @@
+name: neovim
+dependencies:
+  - type: apt
+    names:
+      - build-essentials
+  - type: apt
+    ppa: ppa:neovim-ppa/unstable
+    names:
+      - neovim
+  - type: npm
+    names:
+      - neovim
+  - type: pip3
+    names:
+      - neovim
+  - type: bash
+    names:
+      - packer
+    script:
+      - git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+ignores: []

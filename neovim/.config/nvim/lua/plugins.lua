@@ -16,15 +16,16 @@ return require('packer').startup(function(use)
 
 
   -- Linter and Language Server Protocol
+  use 'neovim/nvim-lspconfig'
   use {
-		'Shougo/deoplete.nvim',
-		cmd = 'UpdateRemotePlugins'
-	}
+    'Shougo/deoplete.nvim',
+    cmd = 'UpdateRemotePlugins'
+  }
   use {
-		'dense-analysis/ale',
-		ft = {'sh', 'zsh', 'bash', 'cpp', 'cmake', 'html', 'markdown', 'vim', 'lua', 'javascript', 'typescript'},
-		cmd = 'ALEEnable',	
-	}
+    'dense-analysis/ale',
+    ft = {'sh', 'zsh', 'bash', 'cpp', 'cmake', 'html', 'markdown', 'vim', 'lua', 'javascript', 'typescript'},
+    cmd = 'ALEEnable',
+  }
 
   -- Javascript
   use { 'pangloss/vim-javascript', ft = {'javascript'} }
